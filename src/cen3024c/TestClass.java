@@ -5,16 +5,16 @@ import java.util.Scanner;
 /**
  * Name.......: Stephen Sturges Jr.
  * Date.......: 6/7/2022
- * Description: Implements the Fibonacci function in both recursive and iterative fashions and displays the runtime efficency of both.
+ * Description: Implements the Fibonacci function in both recursive and iterative fashions and displays the runtime efficiency of both.
  */
 public class TestClass {
 
 	/**
-	 * 
+	 * This is the main class. This class holds the methods for displaying the nth value of the Fibonacci sequence.
 	 * @param args Strings passed into the main.
 	 */
     public static void main(String[] args) {
-        // Request nth fibonnaci sequence iteration from the user.
+        // Request nth Fibonacci sequence iteration from the user.
     	System.out.print("Please enter the iteration of the Fibonacci sequence you want to view: ");
         Scanner input = new Scanner(System.in);
         int iterations = input.nextInt();
@@ -32,6 +32,13 @@ public class TestClass {
         System.out.println(recursiveFibSeq(iterations));
         endTime = System.currentTimeMillis();
         System.out.println("Time to complete: " + (endTime - startTime) + " ms.");
+        
+        // Implement borrowed recursive method to compare speed to the above method.
+        System.out.println("Recusive method:");
+        startTime = System.currentTimeMillis();
+        System.out.println(recursiveFibSeqBorrowed(iterations));
+        endTime = System.currentTimeMillis();
+        System.out.println("Time to complete: " + (endTime - startTime) + " ms.");
 
         // Close the input Scanner.
         input.close();
@@ -39,7 +46,7 @@ public class TestClass {
 
     /**
      * My iterative method.
-     * @param iterations Integer passed into this function to limit the fibonacci sequence iterations.
+     * @param iterations Integer passed into this function to limit the Fibonacci sequence iterations.
      */
     private static void iterativeFibSeq(int iterations) {
         long previous_number = 0;
@@ -63,8 +70,8 @@ public class TestClass {
 
     /**
      * My recursive method.
-     * @param n Long passed into this function to limit the fibonacci sequence iterations.
-     * @return Returns the values n-1 and n-2 from this method.
+     * @param n Long passed into this function to limit the Fibonacci sequence iterations.
+     * @return Returns the values n-1 and n-2 from this method (recursive).
      */
     private static long recursiveFibSeq(long n) {
         if (n == 1) {
@@ -72,6 +79,18 @@ public class TestClass {
         } else if (n == 2) {
             return 1;
         }
-        return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2); // 
+        return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2); // I needed to Google this part.
+    }
+    
+    /**
+     * I Googled for solutions to this problem, this is essentially two of them that I saw. I wanted to compare this to what I had done above.
+     * @param n
+     * @return
+     */
+    private static long recursiveFibSeqBorrowed(long n) {
+    	if (n <= 2) {
+    		return n;
+    	}
+    	return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2);
     }
 }
