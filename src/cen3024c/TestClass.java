@@ -3,8 +3,8 @@ package cen3024c;
 import java.util.Scanner;
 
 /**
- * Name.......: Stephen Sturges Jr.
- * Date.......: 6/7/2022
+ * Name: Stephen Sturges Jr.
+ * Date: 6/7/2022
  * Description: Implements the Fibonacci function in both recursive and iterative fashions and displays the runtime efficiency of both.
  */
 public class TestClass {
@@ -48,7 +48,7 @@ public class TestClass {
      * My iterative method.
      * @param iterations Integer passed into this function to limit the Fibonacci sequence iterations.
      */
-    private static void iterativeFibSeq(int iterations) {
+    public static void iterativeFibSeq(int iterations) {
         long previous_number = 0;
         long current_number = 1;
         long result = 0;
@@ -70,10 +70,10 @@ public class TestClass {
 
     /**
      * My recursive method.
-     * @param n Long passed into this function to limit the Fibonacci sequence iterations.
+     * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
      * @return Returns the values n-1 and n-2 from this method (recursive).
      */
-    private static long recursiveFibSeq(long n) {
+    public static long recursiveFibSeq(long n) {
         if (n == 1) {
             return 0;
         } else if (n == 2) {
@@ -84,10 +84,10 @@ public class TestClass {
     
     /**
      * I Googled for solutions to this problem, this is essentially two of them that I saw. I wanted to compare this to what I had done above.
-     * @param n
-     * @return
+     * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
+     * @return Returns the values n-1 and n-2 from this method (recursive).
      */
-    private static long recursiveFibSeqBorrowed(long n) {
+    public static long recursiveFibSeqBorrowed(long n) {
     	if (n <= 2) {
     		return n;
     	}
