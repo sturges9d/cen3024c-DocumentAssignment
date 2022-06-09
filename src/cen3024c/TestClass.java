@@ -34,7 +34,7 @@ public class TestClass {
         System.out.println("Time to complete: " + (endTime - startTime) + " ms.");
         
         // Implement borrowed recursive method to compare speed to the above method.
-        System.out.println("Recusive method:");
+        System.out.println("Borrowed Recusive method:");
         startTime = System.currentTimeMillis();
         System.out.println(recursiveFibSeqBorrowed(iterations));
         endTime = System.currentTimeMillis();
@@ -87,10 +87,10 @@ public class TestClass {
      * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
      * @return Returns the values n-1 and n-2 from this method (recursive).
      */
-    public static long recursiveFibSeqBorrowed(long n) {
-    	if (n <= 2) {
+    public static int recursiveFibSeqBorrowed(int n) {
+    	if (n <= 1) {
     		return n;
     	}
-    	return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2);
+    	return recursiveFibSeqBorrowed(n - 1) + recursiveFibSeqBorrowed(n - 2);
     }
 }
