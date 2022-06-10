@@ -3,9 +3,8 @@ package cen3024c;
 import java.util.Scanner;
 
 /**
- * Name: Stephen Sturges Jr.
- * Date: 6/7/2022
- * Description: Implements the Fibonacci function in both recursive and iterative fashions and displays the runtime efficiency of both.
+ * Made by Stephen Sturges Jr, 6/7/2022, displays the nth value of the Fibonacci function using both recursive and iterative methods
+ * and displays the elapsed time for each method.
  */
 public class TestClass {
 
