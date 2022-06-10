@@ -24,7 +24,7 @@ public class TestClass {
      * Implements the methods for displaying the nth value of the Fibonacci sequence and the elapsed time for each.
      */
     public TestClass() {
-    	// Request nth Fibonacci sequence iteration from the user.
+    	// Request nth term from the user.
     	System.out.print("Please enter the nth term of the Fibonacci sequence you want to view: ");
         Scanner input = new Scanner(System.in);
         int iterations = input.nextInt();
