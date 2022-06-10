@@ -3,13 +3,17 @@ package cen3024c;
 import java.util.Scanner;
 
 /**
- * Made by Stephen Sturges Jr, 6/7/2022, displays the nth value of the Fibonacci function using both recursive and iterative methods
+ * Displays the nth value of the Fibonacci function using both recursive and iterative methods
  * and displays the elapsed time for each method.
+ * 
+ * @author Stephen Sturges Jr.
+ * @version 6/7/2022.
  */
 public class TestClass {
 
 	/**
-	 * This is the main method and calls the constructor.
+	 * This is the main method and its only call is to the constructor.
+	 * 
 	 * @param args Strings passed into the main.
 	 */
     public static void main(String[] args) {
@@ -17,7 +21,7 @@ public class TestClass {
     }
     
     /**
-     * This constructor implements the methods for displaying the nth value of the Fibonacci sequence and the elapsed time for each.
+     * Implements the methods for displaying the nth value of the Fibonacci sequence and the elapsed time for each.
      */
     public TestClass() {
     	// Request nth Fibonacci sequence iteration from the user.
@@ -51,7 +55,8 @@ public class TestClass {
     }
 
     /**
-     * My iterative method. Works based on 0 as the 1st term in the Fibonacci sequence.
+     * Iterative method. Displays the nth term of the Fibonacci sequence with 0 being the 1st term.
+     * 
      * @param iterations Integer passed into this function to limit the Fibonacci sequence iterations.
      */
     public static void iterativeFibSeq(int iterations) {
@@ -75,8 +80,10 @@ public class TestClass {
     }
 
     /**
-     * My recursive method. Works based on 0 as the 1st term in the Fibonacci sequence.
+     * Recursive method. Displays the nth term of the Fibonacci sequence with 0 being the 1st term.
+     * 
      * @param n Long value passed into this function to limit the Fibonacci sequence iterations. Considered as entering the nth term.
+     * 
      * @return Returns the values n-1 and n-2 from this method (recursive) resulting in the value of the nth term of the Fibonacci sequence.
      */
     public static long recursiveFibSeq(long n) {
