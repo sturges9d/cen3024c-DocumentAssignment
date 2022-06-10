@@ -9,35 +9,42 @@ import java.util.Scanner;
 public class TestClass {
 
 	/**
-	 * This is the main class. This class holds the methods for displaying the nth value of the Fibonacci sequence.
+	 * This is the main method and calls the constructor.
 	 * @param args Strings passed into the main.
 	 */
     public static void main(String[] args) {
-        // Request nth Fibonacci sequence iteration from the user.
+        new TestClass();
+    }
+    
+    /**
+     * This constructor implements the methods for displaying the nth value of the Fibonacci sequence and the elapsed time for each.
+     */
+    public TestClass() {
+    	// Request nth Fibonacci sequence iteration from the user.
     	System.out.print("Please enter the nth term of the Fibonacci sequence you want to view: ");
         Scanner input = new Scanner(System.in);
         int iterations = input.nextInt();
         
         // Implement iterative method.
-        System.out.println("Iterative method:");
+        System.out.println("\nIterative method:");
         long startTime = System.nanoTime();
         iterativeFibSeq(iterations);
         long endTime = System.nanoTime();
-        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
+        System.out.println("Elapsed Time: " + (endTime - startTime) + " ns.");
 
         // Implement recursive method.
-        System.out.println("Recusive method:");
+        System.out.println("\nRecusive method:");
         startTime = System.nanoTime();
-        System.out.println(recursiveFibSeq(iterations));
+        System.out.println("nth Term = " + recursiveFibSeq(iterations));
         endTime = System.nanoTime();
-        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
+        System.out.println("Elapsed Time: " + (endTime - startTime) + " ns.");
         
-        // Implement borrowed recursive method to compare speed to the above method.
-        System.out.println("Borrowed Recusive method:");
-        startTime = System.nanoTime();
-        System.out.println(recursiveFibSeqBorrowed(iterations));
-        endTime = System.nanoTime();
-        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
+//        // Implement borrowed recursive method to compare speed to the above method.
+//        System.out.println("Borrowed Recusive method:");
+//        startTime = System.nanoTime();
+//        System.out.println(recursiveFibSeqBorrowed(iterations));
+//        endTime = System.nanoTime();
+//        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
 
         // Close the input Scanner.
         input.close();
@@ -52,16 +59,16 @@ public class TestClass {
         long current_number = 1;
         long result = 0;
         if (iterations == 1) {
-            System.out.println(previous_number);
+            System.out.println("nth Term = " + previous_number);
         } else if (iterations == 2) {
-            System.out.println(current_number);
+            System.out.println("nth Term = " + current_number);
         } else if (iterations > 2) {
             for (int i = 0; i < (iterations - 2); i++) {
                 result = previous_number + current_number;
                 previous_number = current_number;
                 current_number = result;
             }
-            System.out.println(result);
+            System.out.println("nth Term = " + result);
         } else {
             System.out.println("Please enter a valid integer.");
         }
