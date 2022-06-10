@@ -88,16 +88,16 @@ public class TestClass {
         return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2); // I needed to Google this part.
     }
     
-    /**
-     * I Googled for solutions to this problem, this is essentially two of them that I saw. I wanted to compare this to what I had done above.
-     * This works based on 1 as the 1st term in the Fibonacci sequence.
-     * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
-     * @return Returns the values n-1 and n-2 from this method (recursive).
-     */
-    public static int recursiveFibSeqBorrowed(int n) {
-    	if (n <= 1) {
-    		return n;
-    	}
-    	return recursiveFibSeqBorrowed(n - 1) + recursiveFibSeqBorrowed(n - 2);
-    }
+//    /**
+//     * I Googled for solutions to this problem, this is essentially two of them that I saw. I wanted to compare this to what I had done above.
+//     * This works based on 1 as the 1st term in the Fibonacci sequence.
+//     * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
+//     * @return Returns the values n-1 and n-2 from this method (recursive).
+//     */
+//    public static int recursiveFibSeqBorrowed(int n) {
+//    	if (n <= 1) {
+//    		return n;
+//    	}
+//    	return recursiveFibSeqBorrowed(n - 1) + recursiveFibSeqBorrowed(n - 2);
+//    }
 }
