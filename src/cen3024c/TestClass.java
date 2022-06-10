@@ -21,31 +21,31 @@ public class TestClass {
         
         // Implement iterative method.
         System.out.println("Iterative method:");
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         iterativeFibSeq(iterations);
-        long endTime = System.currentTimeMillis();
-        System.out.println("Time to complete: " + (endTime - startTime) + " ms.");
+        long endTime = System.nanoTime();
+        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
 
         // Implement recursive method.
         System.out.println("Recusive method:");
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         System.out.println(recursiveFibSeq(iterations));
-        endTime = System.currentTimeMillis();
-        System.out.println("Time to complete: " + (endTime - startTime) + " ms.");
+        endTime = System.nanoTime();
+        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
         
         // Implement borrowed recursive method to compare speed to the above method.
         System.out.println("Borrowed Recusive method:");
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         System.out.println(recursiveFibSeqBorrowed(iterations));
-        endTime = System.currentTimeMillis();
-        System.out.println("Time to complete: " + (endTime - startTime) + " ms.");
+        endTime = System.nanoTime();
+        System.out.println("Time to complete: " + (endTime - startTime) + " ns.");
 
         // Close the input Scanner.
         input.close();
     }
 
     /**
-     * My iterative method.
+     * My iterative method. Works based on 0 as the 1st term in the Fibonacci sequence.
      * @param iterations Integer passed into this function to limit the Fibonacci sequence iterations.
      */
     public static void iterativeFibSeq(int iterations) {
@@ -69,9 +69,9 @@ public class TestClass {
     }
 
     /**
-     * My recursive method.
-     * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
-     * @return Returns the values n-1 and n-2 from this method (recursive).
+     * My recursive method. Works based on 0 as the 1st term in the Fibonacci sequence.
+     * @param n Long value passed into this function to limit the Fibonacci sequence iterations. Considered as entering the nth term.
+     * @return Returns the values n-1 and n-2 from this method (recursive) resulting in the value of the nth term of the Fibonacci sequence.
      */
     public static long recursiveFibSeq(long n) {
         if (n == 1) {
@@ -84,6 +84,7 @@ public class TestClass {
     
     /**
      * I Googled for solutions to this problem, this is essentially two of them that I saw. I wanted to compare this to what I had done above.
+     * This works based on 1 as the 1st term in the Fibonacci sequence.
      * @param n Long value passed into this function to limit the Fibonacci sequence iterations.
      * @return Returns the values n-1 and n-2 from this method (recursive).
      */
