@@ -76,7 +76,6 @@ public class TestClass {
      * Recursive method. Displays the nth term of the Fibonacci sequence with 0 being the 1st term.
      * 
      * @param n Long value passed into this function to limit the Fibonacci sequence iterations. Considered as entering the nth term.
-     * 
      * @return Returns the values n-1 and n-2 from this method (recursive) resulting in the value of the nth term of the Fibonacci sequence.
      */
     public static long recursiveFibSeq(long n) {
