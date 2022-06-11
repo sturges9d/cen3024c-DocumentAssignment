@@ -3,8 +3,8 @@ package cen3024c;
 import java.util.Scanner;
 
 /**
- * Displays the nth value of the Fibonacci function using both recursive and iterative methods
- * and displays the elapsed time for each method.
+ * Displays the requested nth value of the Fibonacci sequence using both recursive and iterative methods
+ * and displays the elapsed time.
  * 
  * @author Stephen Sturges Jr.
  * @version 6/7/2022.
@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class TestClass {
 
 	/**
-	 * This is the main method and its only call is to the constructor.
+	 * This is the main method. The only call is to the TestClass() constructor.
 	 * 
 	 * @param args Strings passed into the main.
 	 */
@@ -21,7 +21,7 @@ public class TestClass {
     }
     
     /**
-     * Implements the methods for displaying the nth value of the Fibonacci sequence and the elapsed time for each.
+     * Implements the iterative and recursive methods for displaying the nth value of the Fibonacci sequence and the elapsed time for each.
      */
     public TestClass() {
     	// Request nth term from the user.
@@ -48,7 +48,7 @@ public class TestClass {
     }
 
     /**
-     * Iterative method. Displays the nth term of the Fibonacci sequence with 0 being the 1st term.
+     * Iterative method. Displays the nth term of the Fibonacci sequence based on 0 being the 1st term.
      * 
      * @param iterations Integer passed into this function to limit the Fibonacci sequence iterations.
      */
@@ -73,7 +73,7 @@ public class TestClass {
     }
 
     /**
-     * Recursive method. Displays the nth term of the Fibonacci sequence with 0 being the 1st term.
+     * Recursive method. Displays the nth term of the Fibonacci sequence based on 0 being the 1st term.
      * 
      * @param n Long value passed into this function to limit the Fibonacci sequence iterations. Considered as entering the nth term.
      * @return Returns the values n-1 and n-2 from this method (recursive) resulting in the value of the nth term of the Fibonacci sequence.
