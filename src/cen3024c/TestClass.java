@@ -48,20 +48,21 @@ public class TestClass {
     }
 
     /**
-     * Iterative method. Displays the nth term of the Fibonacci sequence based on 0 being the 1st term.
+     * Iterative method. Calculates and displays the nth term of the Fibonacci sequence based on 0 being the first term of the sequence using iteration.
      * 
-     * @param iterations Integer passed into this function to limit the Fibonacci sequence iterations.
+     * @param n Integer data type passed into this function to limit the Fibonacci sequence iterations to n. In other words, the user enters n
+     * referring to nth term of the Fibonacci sequence.
      */
-    public static void iterativeFibSeq(int iterations) {
+    public static void iterativeFibSeq(int n) {
         long previous_number = 0;
         long current_number = 1;
         long result = 0;
-        if (iterations == 1) {
+        if (n == 1) {
             System.out.println("nth Term = " + previous_number);
-        } else if (iterations == 2) {
+        } else if (n == 2) {
             System.out.println("nth Term = " + current_number);
-        } else if (iterations > 2) {
-            for (int i = 0; i < (iterations - 2); i++) {
+        } else if (n > 2) {
+            for (int i = 0; i < (n - 2); i++) {
                 result = previous_number + current_number;
                 previous_number = current_number;
                 current_number = result;
@@ -73,9 +74,10 @@ public class TestClass {
     }
 
     /**
-     * Recursive method. Displays the nth term of the Fibonacci sequence based on 0 being the 1st term.
+     * Recursive method.Calculates and displays the nth term of the Fibonacci sequence based on 0 being the first term of the sequence using recursion.
      * 
-     * @param n Long value passed into this function to limit the Fibonacci sequence iterations. Considered as entering the nth term.
+     * @param n Long data type value passed into this function to limit the Fibonacci sequence iterations to n. In other words, the user enters n
+     * referring to nth term of the Fibonacci sequence.
      * @return Returns the values n-1 and n-2 from this method (recursive) resulting in the value of the nth term of the Fibonacci sequence.
      */
     public static long recursiveFibSeq(long n) {
@@ -84,6 +86,6 @@ public class TestClass {
         } else if (n == 2) {
             return 1;
         }
-        return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2); // I needed to Google this part.
+        return recursiveFibSeq(n - 1) + recursiveFibSeq(n - 2); // F(n) = F(n-1) + F(n-2)
     }
 }
