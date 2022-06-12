@@ -74,7 +74,7 @@ public class TestClass {
     }
 
     /**
-     * Recursive method.Calculates and displays the nth term of the Fibonacci sequence based on 0 being the first term of the sequence using recursion.
+     * Recursive method. Calculates and displays the nth term of the Fibonacci sequence based on 0 being the first term of the sequence using recursion.
      * 
      * @param n Long data type value passed into this function to limit the Fibonacci sequence iterations to n. In other words, the user enters n
      * referring to nth term of the Fibonacci sequence.
